@@ -42,6 +42,15 @@ void hitungFaktorial(int n, List<String> riwayat) {
   riwayat.add(hasilPerhitungan);
 }
 
-void tampilkanRiwayat(List<String> riwayat) {}  
 
+void tampilkanRiwayat(List<String> riwayat) {
+  if (riwayat.isNotEmpty) {
+    print('\nRiwayat Perhitungan Faktorial:');
+    for (var entry in riwayat) {
+      print(entry);
+    }
+  } else {
+    print('Tidak ada riwayat perhitungan.');
+  }
+}
 
