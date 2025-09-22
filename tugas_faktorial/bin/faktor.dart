@@ -26,9 +26,22 @@ void main() {
 }
 
 void hitungFaktorial(int n, List<String> riwayat) {
-  
+  int hasil = 1;
+  String langkahLangkah = '';
+
+  for (int i = n; i > 0; i--) {
+    hasil *= i;
+    langkahLangkah += (i == 1) ? '$i' : '$i x ';
+  }
+
+  String hasilPerhitungan =
+      'Faktorial dari $n adalah $hasil\n'
+      'Langkah perhitungannya: $langkahLangkah = $hasil';
+
+  print(hasilPerhitungan);
+  riwayat.add(hasilPerhitungan);
 }
 
-void tampilkanRiwayat(List<String> riwayat) {
-  
-}
+void tampilkanRiwayat(List<String> riwayat) {}  
+
+
