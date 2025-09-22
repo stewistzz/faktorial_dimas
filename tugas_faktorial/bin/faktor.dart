@@ -42,6 +42,7 @@ void hitungFaktorial(int n, List<String> riwayat) {
   riwayat.add(hasilPerhitungan);
 }
 
+
 void tampilkanRiwayat(List<String> riwayat) {
   if (riwayat.isNotEmpty) {
     print('\nRiwayat Perhitungan Faktorial:');
@@ -52,3 +53,4 @@ void tampilkanRiwayat(List<String> riwayat) {
     print('Tidak ada riwayat perhitungan.');
   }
 }
+
