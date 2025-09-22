@@ -7,19 +7,25 @@ void main() {
 
   print('Hello, ini Program Faktorial Sederhana!\n');
 
-  // melakukan input angka faktorial
-  print("Masukkan angka faktorial anda : ");
-  // input user
-  String? faktorial = stdin.readLineSync();
-  int? nilaiFaktorial = int.tryParse(faktorial ?? '');
-
-  // input validation
-  if (nilaiFaktorial != null) {
-    hitungFaktorial(nilaiFaktorial, riwayat);
-  } else {
-    print(
-      "Input tidak valid. Mohon masukkan angka yang benar untuk tinggi dan berat badan.",
+  while (true) {
+    stdout.write(
+      'Masukkan angka untuk menghitung faktorial (atau ketik "exit" untuk keluar): ',
     );
+    String? input = stdin.readLineSync();
+
+    if (input == null || input.toLowerCase() == 'exit') {
+      print('Terima kasih telah menggunakan program ini. Sampai jumpa!');
+      break;
+    }
+
+    int? n = int.tryParse(input);
+    if (n == null || n < 0) {
+      print('Input tidak valid. Silakan masukkan angka non-negatif.\n');
+      continue;
+    }
+
+    hitungFaktorial(n, riwayat);
+    print('');
   }
 
   tampilkanRiwayat(riwayat);
@@ -42,7 +48,6 @@ void hitungFaktorial(int n, List<String> riwayat) {
   riwayat.add(hasilPerhitungan);
 }
 
-
 void tampilkanRiwayat(List<String> riwayat) {
   if (riwayat.isNotEmpty) {
     print('\nRiwayat Perhitungan Faktorial:');
@@ -53,4 +58,3 @@ void tampilkanRiwayat(List<String> riwayat) {
     print('Tidak ada riwayat perhitungan.');
   }
 }
-
