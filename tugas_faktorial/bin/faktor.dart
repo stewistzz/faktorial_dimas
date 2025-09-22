@@ -42,4 +42,6 @@ void hitungFaktorial(int n, List<String> riwayat) {
   riwayat.add(hasilPerhitungan);
 }
 
-void tampilkanRiwayat(List<String> riwayat) {}
+void tampilkanRiwayat(List<String> riwayat) {}  
+
+
